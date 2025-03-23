@@ -46,7 +46,7 @@ export default function RootLayout({
                                 <a href="#">Texnologiya</a>
                             </li>
                             <li>
-                                <a href="#">Ta'lim</a>
+                                <a href="#">Ta&apos;lim</a>
                             </li>
                             <li>
                                 <a href="#">Salomatlik</a>
@@ -55,7 +55,7 @@ export default function RootLayout({
                                 <a href="#">Biznes</a>
                             </li>
                             <li>
-                                <a href="#">O'yin-kulgi</a>
+                                <a href="#">O&apos;yin-kulgi</a>
                             </li>
                             <li>
                                 <a href="#">Sayohat</a>
