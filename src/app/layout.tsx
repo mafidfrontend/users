@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Button } from "antd";
-import { ShoppingCartOutlined } from "@ant-design/icons";
+import SavatchaModal from "@/components/SavatchaModal";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -32,13 +31,7 @@ export default function RootLayout({
                 <div className="container mx-auto py-4">
                     <div className="flex justify-between">
                         <h2>LOGO</h2>
-                        <Button
-                            type="primary"
-                            size="large"
-                            icon={<ShoppingCartOutlined />}
-                        >
-                            <span>Savatcha</span>
-                        </Button>
+                        <SavatchaModal />
                     </div>
                     <div>
                         <ul className="flex w-full justify-between mt-4">

@@ -7,3 +7,11 @@ export type ProductsDatasType = {
     productPrice: number;
     productRating: number;
 };
+
+export type ProductStore = {
+    productsData: ProductsDatasType[];
+    cart: ProductsDatasType[];
+    loading: boolean;
+    fetchProducts: () => void;
+    addToCart: (product: ProductsDatasType) => void;
+}

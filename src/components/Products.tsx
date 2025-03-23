@@ -1,28 +1,14 @@
 "use client";
-import { ProductsDatasType } from "@/types";
-import { message } from "antd";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Loading from "./Loading";
+import { useProductStore } from "@/store";
+import { HeartTwoTone } from "@ant-design/icons";
 
 export default function Products() {
-    const [productsData, setProductsData] = useState<ProductsDatasType[]>([]);
-    const [loading, setLoading] = useState(false);
+    const { productsData, loading, fetchProducts, addToCart } = useProductStore();
+
     useEffect(() => {
-        setLoading(true);
-        axios
-            .get(
-                "https://67df9d1f7635238f9aaa0ed7.mockapi.io/mahsulotlar/product/product"
-            )
-            .then((response) => {
-                console.log(response.data);
-                setProductsData(response.data);
-                setLoading(false);
-            })
-            .catch(() => {
-                setLoading(false);
-                message.error("Xatolik yuzaga keldi");
-            });
+        fetchProducts();
     }, []);
 
     if (loading) {
@@ -38,11 +24,16 @@ export default function Products() {
             {productsData.map((product, index) => {
                 return (
                     <div key={index} className="mb-3">
-                        <div>
+                        <div className="relative">
                             <img
                                 src="https://fakeimg.pl/300/"
                                 alt={product.productAbout}
                             />
+                             <HeartTwoTone
+                            className="absolute top-2 right-2 text-2xl cursor-pointer"
+                            twoToneColor="#eb2f96"
+                            onClick={() => addToCart(product)}
+                        />
                         </div>
                         <div className="px-5">
                             <h3 className="font-bold capitalize mt-3">

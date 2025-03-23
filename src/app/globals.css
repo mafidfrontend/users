@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-.loader{
+.loader {
     margin: 0 0 2em;
     height: 100px;
     /* width: 20%; */
@@ -9,9 +9,9 @@
     margin: 0 auto 1em;
     display: inline-block;
     vertical-align: top;
-  }
+}
 
-  .svgLoading path,
-  .svgLoading rect{
-    fill: #FF6700;
-  }
+.svgLoading path,
+.svgLoading rect {
+    fill: #ff6700;
+}
