@@ -50,7 +50,7 @@ export default function Products() {
                             </h3>
                             <p className="font-bold capitalize mb-3">{product.productAbout}</p>
                             <p>Rating: {product.productRating}</p>
-                            <p>Narxi: {product.productPrice} so'm</p>
+                            <p>Narxi: {product.productPrice} so&apos;m</p>
                             <span>Soni: {product.productCount} dona</span>
                         </div>
                     </div>
