@@ -18,7 +18,7 @@ function ProductPage() {
             <div className="flex flex-row gap-4">
                 <div className="border rounded-lg w-[450px] h-[350px] flex items-center justify-center"></div>
                 <div className="flex flex-col justify-start space-y-2 text-2xl ml-8">
-                    <p>Narxi: {product.productPrice} so'm</p>
+                    <p>Narxi: {product.productPrice} so&apos;m</p>
                     <p>Mahsulot haqida: {product.productAbout}</p>
                     <p>Qoldi: {product.productCount} dona</p>
                     <div className="pt-2">
