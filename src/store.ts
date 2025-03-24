@@ -7,7 +7,6 @@ export const useProductStore = create<ProductStore>((set) => ({
     cart: [],
     loading: false,
 
-    // Mahsulotlarni olish
     fetchProducts: () => {
         set({ loading: true });
         axios

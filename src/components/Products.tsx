@@ -27,7 +27,7 @@ export default function Products() {
                 return (
                     <div key={index} className="mb-3">
                         <div className="relative">
-                            <Link href={"/product"}>
+                            <Link href={`/product/${product.productId}`}>
                                 <img
                                     src="https://fakeimg.pl/300/"
                                     alt={product.productAbout}

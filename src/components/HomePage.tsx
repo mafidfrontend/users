@@ -10,7 +10,7 @@ function HomePage() {
                         <SavatchaModal />
                     </div>
                     <div>
-                        <ul className="flex w-full justify-between mt-4">
+                        <ul className="flex flex-wrap gap-3 mt-4">
                             <li>
                                 <a href="#">Texnologiya</a>
                             </li>
