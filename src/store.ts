@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
-import { ProductsDatasType, ProductStore } from "./types";
+import { ProductStore } from "./types";
 
 export const useProductStore = create<ProductStore>((set) => ({
     productsData: [],

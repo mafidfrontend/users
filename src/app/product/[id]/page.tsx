@@ -1,7 +1,6 @@
 "use client";
 import { useProductStore } from "@/store";
 import { Button } from "antd";
-import Image from "next/image";
 import { useParams } from "next/navigation";
 import React from "react";
 

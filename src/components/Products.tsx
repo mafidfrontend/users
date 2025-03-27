@@ -4,9 +4,6 @@ import Loading from "./Loading";
 import { useProductStore } from "@/store";
 import { HeartTwoTone } from "@ant-design/icons";
 import Link from "next/link";
-import Image from "next/image";
-import { log } from "console";
-import { convertPicsumURL } from "@/utils";
 
 export default function Products() {
     const { productsData, loading, fetchProducts, addToCart } =
