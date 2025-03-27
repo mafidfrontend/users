@@ -4,6 +4,9 @@ import Loading from "./Loading";
 import { useProductStore } from "@/store";
 import { HeartTwoTone } from "@ant-design/icons";
 import Link from "next/link";
+import Image from "next/image";
+import { log } from "console";
+import { convertPicsumURL } from "@/utils";
 
 export default function Products() {
     const { productsData, loading, fetchProducts, addToCart } =
@@ -21,16 +24,22 @@ export default function Products() {
         );
     }
 
+    console.log(productsData);
+    
+
     return (
-        <div className="flex flex-wrap justify-between mt-10 px-20">
+        <div className="grid grid-cols-5 items-center mt-10 px-20">
             {productsData.map((product, index) => {
                 return (
                     <div key={index} className="mb-3">
-                        <div className="relative">
-                            <Link href={`/product/${product.productId}`}>
+                        <div className="relative overflow-hidden w-[230px] h-[250]">
+                            <Link href={`/product/${product.id}`}>
                                 <img
-                                    src="https://fakeimg.pl/300/"
-                                    alt={product.productAbout}
+                                    src={product.imageUrl}
+                                    alt={product.name}
+                                    style={{
+                                        width: "100%"
+                                    }}
                                 />
                             </Link>
                             <HeartTwoTone
@@ -41,14 +50,13 @@ export default function Products() {
                         </div>
                         <div className="px-5">
                             <h3 className="font-bold capitalize mt-3">
-                                {product.productName}
+                                {product.name}
                             </h3>
-                            <p className="font-bold capitalize mb-3">
-                                {product.productAbout}
+                            <p className="font-bold capitalize mb-3 h-6 overflow-hidden">
+                                {product.description}
                             </p>
-                            <p>Rating: {product.productRating}</p>
-                            <p>Narxi: {product.productPrice} so&apos;m</p>
-                            <span>Soni: {product.productCount} dona</span>
+                            <p>Narxi: {product.price} so&apos;m</p>
+                            <span>Soni: {product.stock} dona</span>
                         </div>
                     </div>
                 );

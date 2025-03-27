@@ -10,17 +10,19 @@ export const useProductStore = create<ProductStore>((set) => ({
     fetchProducts: () => {
         set({ loading: true });
         axios
-            .get<ProductsDatasType[]>("https://67df9d1f7635238f9aaa0ed7.mockapi.io/mahsulotlar/product/product")
+            .get("https://nt.softly.uz/api/front/products/")
             .then((res) => {
-                set({ productsData: res.data, loading: false });
+                console.log("API response:", res.data);
+                set({ productsData: res.data.items || [], loading: false });
             })
             .catch(() => {
                 set({ loading: false });
             });
     },
+
     addToCart: (product) => {
         set((state) => ({
-            cart: [...state.cart, product], 
+            cart: [...state.cart, product],
         }));
     },
 }));

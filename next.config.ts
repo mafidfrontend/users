@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    unoptimized: true, // ✅ Hamma rasmlar uchun optimizatsiyani o‘chiradi
+  },
 };
 
 export default nextConfig;

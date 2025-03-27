@@ -1,6 +1,7 @@
 import React from 'react'
 import SavatchaModal from './SavatchaModal'
 import Link from 'next/link'
+import Categories from './Categories'
 
 function HomePage() {
   return (
@@ -10,32 +11,7 @@ function HomePage() {
                         <SavatchaModal />
                     </div>
                     <div>
-                        <ul className="flex flex-wrap gap-3 mt-4">
-                            <li>
-                                <a href="#">Texnologiya</a>
-                            </li>
-                            <li>
-                                <a href="#">Ta&apos;lim</a>
-                            </li>
-                            <li>
-                                <a href="#">Salomatlik</a>
-                            </li>
-                            <li>
-                                <a href="#">Biznes</a>
-                            </li>
-                            <li>
-                                <a href="#">O&apos;yin-kulgi</a>
-                            </li>
-                            <li>
-                                <a href="#">Sayohat</a>
-                            </li>
-                            <li>
-                                <a href="#">Sport</a>
-                            </li>
-                            <li>
-                                <a href="#">Hayot tarzi</a>
-                            </li>
-                        </ul>
+                        <Categories />
                     </div>
                 </div>
   )

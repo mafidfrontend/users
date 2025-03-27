@@ -1,11 +1,12 @@
 export type ProductsDatasType = {
-    productId: string;
-    productAbout: string;
-    productCount: number;
-    productImg: string;
-    productName: string;
-    productPrice: number;
-    productRating: number;
+    id: number;
+    name: string;
+    description: string;
+    price: string;
+    stock: number;
+    categoryId: number;
+    createdAt: string;
+    imageUrl: string;
 };
 
 export type ProductStore = {
@@ -14,4 +15,11 @@ export type ProductStore = {
     loading: boolean;
     fetchProducts: () => void;
     addToCart: (product: ProductsDatasType) => void;
+};
+
+export type CategoriesType = {
+    id: number,
+    name: string,
+    description: string,
+    createdAt: string
 }

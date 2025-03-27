@@ -7,7 +7,6 @@ import React, { useState } from "react";
 function SavatchaModal() {
     const [modalOpen, setModalOpen] = useState(false);
     const { cart } = useProductStore();
-    console.log(cart)
     return (
         <>
             <Button
@@ -36,14 +35,14 @@ function SavatchaModal() {
                 ) : (
                     cart.map((product) => (
                         <div
-                            key={product.productId}
+                            key={product.id}
                             className="border p-3 mb-2 rounded flex items-center gap-3"
                         >
                             <div>
-                                <img src="https://fakeimg.pl/300/" width={100} height={100}  alt={product.productAbout} />
+                                <img src={product.imageUrl} width={100} height={100}  alt={product.description} />
                             </div>
-                            <h3 className="font-bold">{product.productName}</h3>
-                            <p>Narxi: {product.productPrice} so&apos;m</p>
+                            <h3 className="font-bold">{product.name}</h3>
+                            <p>Narxi: {product.price} so&apos;m</p>
                         </div>
                     ))
                 )}
